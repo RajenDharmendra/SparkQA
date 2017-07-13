@@ -260,4 +260,14 @@ Q41.Illustrate some demerits of using Spark.
 
 Since Spark utilizes more storage space compared to Hadoop and MapReduce, there may arise certain problems. Developers need to be careful while running their applications in Spark. Instead of running everything on a single node, the work must be distributed over multiple clusters.
 
+Q42.What is the advantage of a Parquet file? 
 
+Parquet file is a columnar format file that helps –
+                Limit I/O operations
+                Consumes less space
+                Fetches only required columns. 
+
+
+Q43.What is the difference between persist() and cache()
+
+persist () allows the user to specify the storage level whereas cache () uses the default storage level. 
