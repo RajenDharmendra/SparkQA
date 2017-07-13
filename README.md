@@ -232,4 +232,32 @@ Spark SQL is capable of:
     Providing rich integration between SQL and regular Python/Java/Scala code, including the ability to join RDDs and SQL tables, expose custom functions in SQL, and more.
 
 
+Q37.What are benefits of Spark over MapReduce?
+
+
+    Due to the availability of in-memory processing, Spark implements the processing around 10-100x faster than Hadoop MapReduce. MapReduce makes use of persistence storage for any of the data processing tasks.
+    Unlike Hadoop, Spark provides in-built libraries to perform multiple tasks form the same core like batch processing, Steaming, Machine learning, Interactive SQL queries. However, Hadoop only supports batch processing.
+    Hadoop is highly disk-dependent whereas Spark promotes caching and in-memory data storage.
+    Spark is capable of performing computations multiple times on the same dataset. This is called iterative computation while there is no iterative computing implemented by Hadoop.
+
+Q38. What is Spark Executor?
+
+When SparkContext connect to a cluster manager, it acquires an Executor on nodes in the cluster. Executors are Spark processes that run computations and store the data on the worker node. The final tasks by SparkContext are transferred to executors for their execution.
+
+Q39.Name types of Cluster Managers in Spark.
+
+The Spark framework supports three major types of Cluster Managers:
+
+    Standalone : a basic manager to set up a cluster.
+    Apache Mesos : generalized/commonly-used cluster manager, also runs Hadoop MapReduce and other applications.
+    Yarn : responsible for resource management in Hadoop
+
+Q40. What do you understand by worker node?
+
+Worker node refers to any node that can run the application code in a cluster.
+
+Q41.Illustrate some demerits of using Spark.
+
+Since Spark utilizes more storage space compared to Hadoop and MapReduce, there may arise certain problems. Developers need to be careful while running their applications in Spark. Instead of running everything on a single node, the work must be distributed over multiple clusters.
+
 
