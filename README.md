@@ -144,3 +144,92 @@ Q20.  What do you understand by SchemaRDD?
 Ans. SchemaRDD is an RDD that consists of row objects (wrappers around the basic string or integer arrays) with schema information about the type of data in each column.
 
 These are some of the popular questions asked in an Apache Spark interview. Always be prepared to answer all types of questions — technical skills, interpersonal, leadership or methodology. If you are someone who has recently started your career in big data, you can always get certified in Apache Spark to get the techniques and skills required to be an expert in the field.
+
+Q21.What is Apache Spark?
+
+Spark is a fast, easy-to-use and flexible data processing framework. It has an advanced execution engine supporting cyclic data  flow and in-memory computing. Spark can run on Hadoop, standalone or in the cloud and is capable of accessing diverse data sources including HDFS, HBase, Cassandra and others.
+
+Q22. Explain key features of Spark.
+
+
+    Allows Integration with Hadoop and files included in HDFS.
+    Spark has an interactive language shell as it has an independent Scala (the language in which Spark is written) interpreter.
+    Spark consists of RDD’s (Resilient Distributed Datasets), which can be cached across computing nodes in a cluster.
+    Spark supports multiple analytic tools that are used for interactive query analysis , real-time analysis and graph      processing
+
+Q23. Define RDD?
+
+RDD is the acronym for Resilient Distribution Datasets – a fault-tolerant collection of operational elements that run parallel. The partitioned data in RDD is immutable and distributed. There are primarily two types of RDD:
+
+    Parallelized Collections : The existing RDD’s running parallel with one another.
+    Hadoop datasets : perform function on each file record in HDFS or other storage system
+
+Q24. What does a Spark Engine do?
+
+Spark Engine is responsible for scheduling, distributing and monitoring the data application across the cluster.
+
+Q25.Define Partitions?
+
+As the name suggests, partition is a smaller and logical division of data  similar to ‘split’ in MapReduce. Partitioning is the process to derive logical units of data to speed up the processing process. Everything in Spark is a partitioned RDD.
+
+Q26.What operations RDD support?
+
+
+    Transformations.
+    Actions
+
+Q27.What do you understand by Transformations in Spark?
+
+Transformations are functions applied on RDD, resulting into another RDD. It does not execute until an action occurs. map() and filer() are examples of transformations, where the former applies the function passed to it on each element of RDD and results into another RDD. The filter() creates a new RDD by selecting elements form current RDD that pass function argument.
+
+Q28.Define Actions.
+
+An action helps in bringing back the data from RDD to the local machine. An action’s execution is the result of all previously created transformations. reduce() is an action that implements the function passed again and again until one value if left. take() action takes all the values from RDD to local node.
+
+Q29.Define functions of SparkCore?
+
+Serving as the base engine, SparkCore performs various important functions like memory management, monitoring jobs, fault-tolerance, job scheduling and interaction with storage systems.
+
+Q30.What is RDD Lineage?
+
+Spark does not support data replication in the memory and thus, if any data is lost, it is rebuild using RDD lineage. RDD lineage is a process that reconstructs lost data partitions. The best is that RDD always remembers how to build from other datasets.
+
+Q31.What is Spark Driver?
+
+Spark Driver is the program that runs on the master node of the machine and declares transformations and actions on data RDDs. In simple terms, driver in Spark creates SparkContext, connected to a given Spark Master.
+The driver also delivers the RDD graphs to Master, where the standalone cluster manager runs.
+
+Q32.What is Hive on Spark?
+
+Hive contains significant support for Apache Spark, wherein Hive execution is configured to Spark:
+
+  hive> set spark.home=/location/to/sparkHome;
+  hive> set hive.execution.engine=spark;
+  
+Q33. Name commonly-used Spark Ecosystems.
+
+
+    Spark SQL (Shark)- for developers.
+    Spark Streaming for processing live data streams.
+    GraphX for generating and computing graphs.
+    MLlib (Machine Learning Algorithms).
+    SparkR to promote R Programming in Spark engine.
+
+Q34. Define Spark Streaming.
+
+Spark supports stream processing – an extension to the Spark API , allowing stream processing of live data streams. The data from different sources like Flume, HDFS is streamed and finally processed to file systems, live dashboards and databases. It is similar to batch processing as the input data is divided into streams like batches.
+
+Q35.What is Spark SQL?
+
+SQL Spark, better known as Shark is a novel module introduced in Spark to work with structured data and perform structured data processing. Through this module, Spark executes relational SQL queries on the data. The core of the component supports an altogether different RDD called SchemaRDD, composed of rows objects and schema objects defining data type of each column in the row. It is similar to a table in relational database.
+
+Q36.List the functions of Spark SQL.?
+
+Spark SQL is capable of:
+
+    Loading data from a variety of structured sources.
+    Querying data using SQL statements, both inside a Spark program and from external tools that connect to Spark SQL through standard database connectors (JDBC/ODBC). For instance, using business intelligence tools like Tableau.
+    Providing rich integration between SQL and regular Python/Java/Scala code, including the ability to join RDDs and SQL tables, expose custom functions in SQL, and more.
+
+
+
