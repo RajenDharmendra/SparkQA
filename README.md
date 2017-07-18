@@ -271,3 +271,10 @@ Parquet file is a columnar format file that helps –
 Q43.What is the difference between persist() and cache()
 
 persist () allows the user to specify the storage level whereas cache () uses the default storage level. 
+
+Q44.what are different o/p methods to get result?
+
+collect()
+show()
+take()
+foreach(println)
