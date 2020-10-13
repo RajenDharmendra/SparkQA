@@ -281,3 +281,28 @@ collect()
 show()
 take()
 foreach(println)
+
+
+
+**Q45:**  What are two ways to attain a schema from data?  
+**Ans:**  Allow Spark to infer a schema from your data or provide a user defined schema. Schema inference is the recommended first step; however, you can customize this schema to your use case with a user defined schema.
+**Note**
+
+> Providing a schema increases performance two to three times, depending
+> on the size of the cluster used. Since Spark doesn't infer the schema,
+> it doesn't have to read through all of the data. This is also why
+> there are fewer jobs when a schema is provided: Spark doesn't need one
+> job for each partition of the data to infer the schema.
+
+**Q46:**  Why should you define your own schema?  
+**Ans:**  Benefits of user defined schemas include:
+
+-   Avoiding the extra scan of your data needed to infer the schema
+-   Providing alternative data types
+-   Parsing only the fields you need
+
+**Q47:**  Why is JSON a common format in big data pipelines?  
+**Ans:**  Semi-structured data works well with hierarchical data and where schemas need to evolve over time. It also easily contains composite data types such as arrays and maps.
+
+**Question:**  By default, how are corrupt records dealt with using  `spark.read.json()`?  
+**Answer:**  They appear in a column called  `_corrupt_record`. These are the records that Spark can't read (e.g. when characters are missing from a JSON string).
