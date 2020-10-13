@@ -41,12 +41,12 @@ Q5.  What is a Sparse Vector?
 
 Ans. A sparse vector has two parallel arrays –one for indices and the other for values.
  
-Q6.  What are the languages supported by Apache Spark and which is the most popular one?
+Q6.  What are the languages supported by Apache Spark and which is the most popular one, What JDBC and why it is popular?
 
  
 
 Ans. There are four languages supported by Apache Spark – Scala, Java, Python, and R. Scala is the most popular one.
-Java Database Connectivity
+**Java Database Connectivity**
 Java Database Connectivity (JDBC) is an application programming interface (API) that defines database connections in Java environments. Spark is written in Scala, which runs on the Java Virtual Machine (JVM). This makes JDBC the preferred method for connecting to data whenever possible. Hadoop, Hive, and MySQL all run on Java and easily interface with Spark clusters.
 
 Databases are advanced technologies that benefit from decades of research and development. To leverage the inherent efficiencies of database engines, Spark uses an optimization called predicate pushdown. Predicate pushdown uses the database itself to handle certain parts of a query (the predicates). In mathematics and functional programming, a predicate is anything that returns a Boolean. In SQL terms, this often refers to the WHERE clause. Since the database is filtering data before it arrives on the Spark cluster, there's less data transfer across the network and fewer records for Spark to process. Spark's Catalyst Optimizer includes predicate pushdown communicated through the JDBC API, making JDBC an ideal data source for Spark workloads.
