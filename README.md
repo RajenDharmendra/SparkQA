@@ -304,5 +304,5 @@ foreach(println)
 **Q47:**  Why is JSON a common format in big data pipelines?  
 **Ans:**  Semi-structured data works well with hierarchical data and where schemas need to evolve over time. It also easily contains composite data types such as arrays and maps.
 
-**Question:**  By default, how are corrupt records dealt with using  `spark.read.json()`?  
-**Answer:**  They appear in a column called  `_corrupt_record`. These are the records that Spark can't read (e.g. when characters are missing from a JSON string).
+**Q48:**  By default, how are corrupt records dealt with using  `spark.read.json()`?  
+**Ans:**  They appear in a column called  `_corrupt_record`. These are the records that Spark can't read (e.g. when characters are missing from a JSON string).
